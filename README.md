@@ -20,6 +20,8 @@ Should result in:
 {"greeting":"Hello, world!"}
 ```
 
+Or navigate to [http://localhost:9926](http://localhost:9926) in a browser and view the functional web application.
+
 For more information about getting started with HarperDB and building applications, see our [getting started guide](https://docs.harperdb.io/docs/getting-started).
 
 For more information on Harper Components, see the [Components documentation](https://docs.harperdb.io/docs/developers/components).
