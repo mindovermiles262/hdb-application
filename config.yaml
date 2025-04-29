@@ -1,15 +1,14 @@
-# This defines the configuration of this application. Each defines a (sub) component that is loaded and
-# used for this application. These components can provide specific functionality and define how different
-# files in your app are loaded.
-rest: true  # This provides the HTTP REST interface for all exported resources
-graphqlSchema:  # These reads GraphQL schemas to define the schema of database/tables/attributes.
-  files: '*.graphql' # looks for these files
-  # path: / # exported queries are on the root path by default
-jsResource: # Loads JavaScript modules such that their exports are exported as resources
-  files: resources.js # the entry module for resources
-  # path: / # exported resources are on the root path by default, like http://server/resource-name
-static: # This allows static files to be directly accessible
-  root: web
-  files: web/**
-roles: # This can define the roles that are used in the application
-  files: roles.yaml
+# This is the configuration file for the application.
+# It specifies built-in Harper components that will load the specified feature and files.
+# For more information, see https://docs.harperdb.io/docs/developers/components/built-in
+
+# This provides the HTTP REST interface for all exported resources
+rest: true
+
+# These reads GraphQL schemas to define the schema of database/tables/attributes.
+graphqlSchema:
+  files: 'schema.graphql'
+
+# Loads JavaScript modules such that their exports are exported as resources
+jsResource:
+  files: 'resources.js'
