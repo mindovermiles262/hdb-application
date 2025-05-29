@@ -14,14 +14,15 @@ Once running, test your application works by querying the `/healthz` endpoint:
 ```sh
 curl http://localhost:9926/healthz
 ```
-
 Should result in:
 
 ```json
-{"greeting":"Hello, world!"}
+{"Error: Must login"}
 ```
 
-Or navigate to [http://localhost:9926](http://localhost:9926) in a browser and view the functional web application.
+(You can log in using basic auth header, `-H 'authorization: Basic <BASE64-ENCODED-USERNAME-PASSWORD>')
+
+Or navigate to [http://localhost:9925](http://localhost:9925) in a browser and view the functional database explorer.
 
 For more information about getting started with HarperDB and building applications, see our [getting started guide](https://docs.harperdb.io/docs/getting-started).
 
