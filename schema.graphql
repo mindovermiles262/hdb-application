@@ -2,4 +2,5 @@ type pokemon @table @export {
     id: Int @primaryKey
     name: String
     primaryType: String @indexed
+    secondaryType: String @indexed
 }
