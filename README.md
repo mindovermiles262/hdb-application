@@ -2,16 +2,17 @@
 
 This is a template for building [Harper](https://www.harpersystems.dev/) applications. You can download this repository as a starting point for building applications with Harper.
 
-To get started, make sure you have [installed Harper](https://docs.harperdb.io/docs/deployments/install-harper), which can be quickly done with `npm install -g harperdb`.
-
-You can run your application from the directory where you downloaded the contents of this repository with: `harperdb run /path/to/your-app`.
-
-Or if you set your current working directory to that directory, you can run it as `harperdb run .`.
-
-Once running, test your application works by querying the `/Greeting` endpoint:
+To get started, make sure you have Docker (or similar) installed. Then it's as simple as
 
 ```sh
-curl http://localhost:9926/Greeting
+docker build -t hdb-container .
+docker run -p 9925:9925 -p 9926:9925 hdb-container
+```
+
+Once running, test your application works by querying the `/healthz` endpoint:
+
+```sh
+curl http://localhost:9926/healthz
 ```
 
 Should result in:
