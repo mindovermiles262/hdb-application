@@ -19,4 +19,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: mindovermiles262/hdb-application:latest
+          tags: ghcr.io/mindovermiles262/hdb-application:latest
